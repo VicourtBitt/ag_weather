@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <h3>⭐ Favoritos</h3>
+    <ul>
+      <li *ngFor="let city of favorites" (click)="selectCity(city)">
+        {{ city }}
+      </li>
+    </ul>
+</div>
+  
