@@ -1,0 +1,7 @@
+<div class="weather-card" *ngIf="weather">
+    <h2>{{ weather.city.name }}, {{ weather.city.country }}</h2>
+    <h3>{{ weather.list[0].main.temp }}°C</h3>
+    <p>Máx: {{ weather.list[0].main.temp_max }}°C | Mín: {{ weather.list[0].main.temp_min }}°C</p>
+    <span class="emoji">{{ getWeatherEmoji(weather.list[0].weather[0].main) }}</span>
+    <button mat-button (click)="handleFavorite()">⭐ Favoritar</button>
+</div>
